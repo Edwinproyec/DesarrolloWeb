@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar  las letras</title>
+    <meta name="robots" content="index follow">
+    <link rel="icon" href="c:\Users\Usuario HP\Pictures\Screenshots\Captura de pantalla 2024-03-17 150713.png">
+    <link rel="stylesheet" href="style.css">
+     <style>
+         body {
+             background-color:blue             
+         }
+        
+     </style>
+</head>
+<body>
+    <h1>cuantas beses le repite:</h1>
+    <p id="resultado"></p>
+
+    <script>
+        function contarLetra(palabra, letra) {
+            let contador = 0;
+            for (let i = 0; i < palabra.length; i++) {
+                if (palabra[i] === letra) {
+                    contador++;
+                }
+            }
+            document.getElementById('resultado').textContent = 
+                `La letra ${letra} se repite ${contador} veces en la palabra ${palabra}.`;
+        }
+        contarLetra("ELEFANTE", "E");
+    </script>
+</body>
+</html>
